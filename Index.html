@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Davi Lucas, desenvolvedor iniciante. Conheça meus projetos.">
+    <title>Davi Lucas | Back-end Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">Meu Projeto</div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contatos">Contatos</a></li>
+        </ul>
+    </nav>
+    <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+    </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+    <ul>
+        <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
+        <li><a href="#sobre" onclick="closeMobileMenu()">Sobre Mim</a></li>
+        <li><a href="#bio" onclick="closeMobileMenu()">Bio</a></li>
+        <li><a href="#projetos" onclick="closeMobileMenu()">Projetos</a></li>
+        <li><a href="#contatos" onclick="closeMobileMenu()">Contatos</a></li>
+    </ul>
+</div>
+
+<main id="home" class="container-principal">
+
+    <section id="sobre" class="perfil">
+        <h2>David Lucas</h2>
+        <div class="perfil-img-wrap">
+            <img src="https://i.pinimg.com/736x/8d/f4/1b/8df41ba77439160a67b10b330f65abb9.jpg" alt="Foto de perfil">
+        </div>
+        <p>Olá! Eu Sou o Davi e sou um desenvolvedor <strong>Iniciante!</strong></p>
+        <button onclick="window.location.href='#projetos'">Ver Projetos</button>
+    </section>
+
+    <section id="projetos" class="secao-galeria">
+        <h2 class="titulo-galeria">Oque O Davi fez ?</h2>
+        <div class="slider">
+            <div class="slider-content">
+                <input type="radio" name="btn-radio" id="radio1" checked>
+                <input type="radio" name="btn-radio" id="radio2">
+                <input type="radio" name="btn-radio" id="radio3">
+                <input type="radio" name="btn-radio" id="radio4">
+
+                <button class="slider-arrow prev" id="prevBtn">&#8249;</button>
+                <button class="slider-arrow next" id="nextBtn">&#8250;</button>
+
+                <div class="slides">
+                    <div class="slide-box">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+                        <div class="slide-info">
+                            <span class="slide-empresa">Google</span>
+                            <h3 class="slide-titulo">Auxilio e Organização</h3>
+                            <p class="slide-desc">Auxiliei na documentação e Organizei os repositórios da equipe.</p>
+                        </div>
+                    </div>
+                    <div class="slide-box">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+                        <div class="slide-info">
+                            <span class="slide-empresa">Amazon</span>
+                            <h3 class="slide-titulo">Manutenção e Correção</h3>
+                            <p class="slide-desc">Participei da manutenção de scripts e da automação, também corrigi alguns bugs</p>
+                        </div>
+                    </div>
+                    <div class="slide-box">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+                        <div class="slide-info">
+                            <span class="slide-empresa">Microsoft</span>
+                            <h3 class="slide-titulo">Apoio e Revisão</h3>
+                            <p class="slide-desc">Apoiei o time no versionamento do código e na revisão dele</p>
+                        </div>
+                    </div>
+                    <div class="slide-box">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix">
+                        <div class="slide-info">
+                            <span class="slide-empresa">Netflix</span>
+                            <h3 class="slide-titulo">Sistema de Recomendação</h3>
+                            <p class="slide-desc">Contribuí em um sistema de recomendação de conteúdo baseado em histórico de visualizações dos usuários.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<section id="bio" class="secao-bio">
+    <div class="bio-inner">
+        <h2 class="bio-titulo">Sobre Mim</h2>
+        <div class="bio-grid">
+            <div class="bio-texto">
+                <p>Eu tenho 16 anos de idade 1.89m de altura e me interessei na área de tecnologia. uai, é só isso ?.</p>
+                <p>Claro que sim,acha que eu vou falar até onde eu moro e o nome do meu chachorro ?</p>
+                <p>é só isso mano,eu to escrevendo isso aqui só pra preencher o espaço, não tem nada de interessante aqui, então é isso, tem mais coisa na sua direita ai ó.</p>
+            </div>
+            <div class="bio-cards">
+                <div class="bio-card">
+                    <span class="bio-card-icone"></span>
+                    <h4>Formação</h4>
+                    <p>Atualmente eu sou um estudante do ensino médio que está fazendo um curso de Desenvolvimento de sistemas (HTML e CSS :D).</p>
+                </div>
+                <div class="bio-card">
+                    <span class="bio-card-icone"></span>
+                    <h4>Experiência</h4>
+                    <p>eu só sei jogar futebol e basquete KKKKKKK :D</p>
+                </div>
+                <div class="bio-card">
+                    <span class="bio-card-icone"></span>
+                    <h4>Eu Sou de:</h4>
+                    <p>Goiânia - Goiás - Brasil</p>
+                </div>
+                <div class="bio-card">
+                    <span class="bio-card-icone"></span>
+                    <h4>Meu Objetivo</h4>
+                    <p>Eu desejo aprender varias linguagens de programação e trabalhar com isto no futuro.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="contatos" class="rodape">
+    <p>&copy; 2026 — DavizinMaker</p>
+    <p>Made In Brazil</p>
+    <div class="rodape-links">
+        <a href="https://github.com/DaviLucasBorges" target="_blank" rel="noopener noreferrer" class="btn-github">Meu GitHub</a>
+        <a href="davilucasborges2010gmail.com" class="btn-email">Contato</a>
+    </div>
+</footer>
+
+<script>
+    let contador = 1;
+    document.getElementById("radio1").checked = true;
+
+    function goToSlide(n) {
+        if (n < 1) n = 4;
+        if (n > 4) n = 1;
+        contador = n;
+        document.getElementById("radio" + contador).checked = true;
+    }
+
+    document.getElementById("nextBtn").addEventListener("click", () => goToSlide(contador + 1));
+    document.getElementById("prevBtn").addEventListener("click", () => goToSlide(contador - 1));
+
+    document.querySelectorAll(".manual-btn").forEach((btn, i) => {
+        btn.addEventListener("click", () => goToSlide(i + 1));
+    });
+
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("open");
+        mobileMenu.classList.toggle("open");
+    });
+
+    function closeMobileMenu() {
+        hamburger.classList.remove("open");
+        mobileMenu.classList.remove("open");
+    }
+</script>
+
+</body>
+</html>
