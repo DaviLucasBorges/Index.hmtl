@@ -21,6 +21,7 @@
             <li><a href="#bio">Bio</a></li>
             <li><a href="#projetos">Projetos</a></li>
             <li><a href="#contatos">Contatos</a></li>
+            <li><a href="#" onclick="abrirOrcamento()">Solicitar Orçamento</a></li>
         </ul>
     </nav>
     <div class="hamburger" id="hamburger">
@@ -35,6 +36,7 @@
         <li><a href="#bio" onclick="closeMobileMenu()">Bio</a></li>
         <li><a href="#projetos" onclick="closeMobileMenu()">Projetos</a></li>
         <li><a href="#contatos" onclick="closeMobileMenu()">Contatos</a></li>
+        <li><a href="#" onclick="abrirOrcamento(); closeMobileMenu()">Solicitar Orçamento</a></li>
     </ul>
 </div>
 
@@ -67,7 +69,7 @@
                         <div class="slide-info">
                             <span class="slide-empresa">Google</span>
                             <h3 class="slide-titulo">Auxilio e Organização</h3>
-                            <p class="slide-desc">Auxiliei na documentação e Organizei os repositórios da equipe.</p>
+                            <p class="slide-desc">Auxiliei na documentação de updates e Organizei os repositórios da equipe.</p>
                         </div>
                     </div>
                     <div class="slide-box">
@@ -143,12 +145,49 @@
     </div>
 </section>
 
+<section id="orcamento" class="secao-orcamento">
+    <div class="orcamento-inner">
+        <h2 class="orcamento-titulo">Solicitar Orçamento</h2>
+        <p class="orcamento-sub">Preencha o formulário abaixo e entrarei em contato!</p>
+        <form class="orcamento-form" onsubmit="enviarOrcamento(event)">
+            <div class="form-grupo">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" placeholder="Seu nome completo" required>
+            </div>
+            <div class="form-grupo">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="seu@email.com" required>
+            </div>
+            <div class="form-grupo">
+                <label for="servico">Tipo de Serviço</label>
+                <select id="servico" required>
+                    <option value="" disabled selected>Selecione um serviço</option>
+                    <option value="Site">Criação de Site</option>
+                    <option value="API">Desenvolvimento de API</option>
+                    <option value="Automação">Automação de Processos</option>
+                    <option value="Manutenção">Manutenção de Sistema</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+            <div class="form-grupo">
+                <label for="descricao">Descrição do Projeto</label>
+                <textarea id="descricao" rows="5" placeholder="Descreva o que você precisa..." required></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar Solicitação</button>
+        </form>
+        <div class="form-sucesso" id="formSucesso">
+            ✅ Solicitação enviada com sucesso! Entrarei em contato em breve.
+        </div>
+    </div>
+</section>
+
 <footer id="contatos" class="rodape">
     <p>&copy; 2026 — DavizinMaker</p>
     <p>Made In Brazil</p>
     <div class="rodape-links">
         <a href="https://github.com/DaviLucasBorges" target="_blank" rel="noopener noreferrer" class="btn-github">Meu GitHub</a>
-        <a href="davilucasborges2010gmail.com" class="btn-email">Contato</a>
+        <a href="mailto:davilucasborges2010@gmail.com" class="btn-email">Contato</a>
+        <a href="#" onclick="abrirOrcamento()" class="btn-orcamento">Solicitar Orçamento</a>
     </div>
 </footer>
 
@@ -181,6 +220,32 @@
     function closeMobileMenu() {
         hamburger.classList.remove("open");
         mobileMenu.classList.remove("open");
+    }
+
+    function abrirOrcamento() {
+        const secao = document.getElementById("orcamento");
+        secao.classList.add("ativo");
+        setTimeout(() => {
+            secao.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+    }
+
+    function enviarOrcamento(e) {
+        e.preventDefault();
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+        const servico = document.getElementById("servico").value;
+        const descricao = document.getElementById("descricao").value;
+
+        const assunto = encodeURIComponent(`Orçamento - ${servico} | ${nome}`);
+        const corpo = encodeURIComponent(
+            `Nome: ${nome}\nEmail: ${email}\nServiço: ${servico}\n\nDescrição:\n${descricao}`
+        );
+
+        window.location.href = `mailto:davilucasborges2010@gmail.com?subject=${assunto}&body=${corpo}`;
+
+        document.getElementById("formSucesso").style.display = "block";
+        document.querySelector(".orcamento-form").reset();
     }
 </script>
 
