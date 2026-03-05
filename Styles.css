@@ -6,7 +6,7 @@
 }
 
 html {
-    scroll-behavior: smoot h;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -444,6 +444,119 @@ body {
     line-height: 1.5;
 }
 
+.secao-orcamento {
+    display: none;
+    background-color: #161616;
+    border-top: 1px solid #222;
+    padding: 5rem 4rem;
+    animation: fadeIn 0.5s ease;
+}
+
+.secao-orcamento.ativo {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.orcamento-inner {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.orcamento-titulo {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.5rem;
+    color: #e0e0e0;
+}
+
+.orcamento-sub {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.orcamento-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-grupo label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #2196F3;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+    background: #1a1a1a;
+    border: 1px solid #242424;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    color: #e0e0e0;
+    font-size: 0.85rem;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.3s;
+    outline: none;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+    border-color: #2196F3;
+}
+
+.form-grupo select option {
+    background: #1a1a1a;
+}
+
+.form-grupo textarea {
+    resize: vertical;
+}
+
+.btn-enviar {
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    align-self: flex-start;
+}
+
+.btn-enviar:hover {
+    background-color: #1976D2;
+    transform: translateY(-2px);
+}
+
+.form-sucesso {
+    display: none;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #1a2a1a;
+    border: 1px solid #2e7d32;
+    border-radius: 6px;
+    color: #81c784;
+    font-size: 0.85rem;
+}
+
 .rodape {
     background-color: #1e1e1e;
     text-align: center;
@@ -465,7 +578,7 @@ body {
     margin-top: 1rem;
 }
 
-.btn-github, .btn-email {
+.btn-github, .btn-email, .btn-orcamento {
     display: inline-block;
     color: #2196F3;
     text-decoration: none;
@@ -477,7 +590,7 @@ body {
     transition: background-color 0.2s, color 0.2s;
 }
 
-.btn-github:hover, .btn-email:hover {
+.btn-github:hover, .btn-email:hover, .btn-orcamento:hover {
     background-color: #2196F3;
     color: #ffffff;
 }
@@ -496,6 +609,10 @@ body {
     }
 
     .secao-bio {
+        padding: 3.5rem 1.5rem;
+    }
+
+    .secao-orcamento {
         padding: 3.5rem 1.5rem;
     }
 
