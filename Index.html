@@ -1,84 +1,403 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styles.css">
-    <script src="https://kit.fontawesome.com/a0b4c5e6f7.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/77b4ef7fc8.js" crossorigin="anonymous"></script>
     <title>Davi Lucas | Dev Jr</title>
 </head>
 
 <body>
+    <input type="checkbox" id="theme-toggle" class="theme-toggle" aria-label="Alternar modo claro e escuro">
 
     <header>
         <div class="nav-bar">
-            <a href="#" class="nav-logo">Davi Lucas</a>
-            <div class="navigation">
+            <a href="#" class="logo">Davi Lucas</a>
+            <nav class="navigation">
                 <div class="nav-items">
-                    <a href="#home">Home</a>
-                    <a href="#about">Sobre</a>
-                    <a href="#skills">Habilidades</a>
-                    <a href="#portfolio">Portfólio</a>
-                    <a href="#contact">Contato</a>
+                    <a href="#home" data-i18n="navHome">Home</a>
+                    <a href="#portfolio" data-i18n="navPortfolio">Portfólio</a>
+                    <a href="#contacts" data-i18n="navContact">Contato</a>
+                    <label for="theme-toggle" class="theme-button" aria-label="Alternar tema"></label>
                 </div>
-            </div>
+            </nav>
         </div>
     </header>
 
-    <!-- Home -->
+    <div class="language-menu" id="language-menu">
+        <button type="button" id="language-toggle" class="language-button" aria-label="Abrir menu de idiomas" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+            <span id="current-language">PT</span>
+        </button>
+        <div class="language-options" id="language-options">
+            <button type="button" data-lang="pt">PT</button>
+            <button type="button" data-lang="en">EN</button>
+            <button type="button" data-lang="es">ES</button>
+            <button type="button" data-lang="fr">FR</button>
+            <button type="button" data-lang="jp">JP</button>
+        </div>
+    </div>
 
-    <section class="home flex-center" id="home">
-        <div class="home-container">
-            <div class="media-icons">
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
+    <main>
+        <section class="home flex-center" id="home">
+            <div class="home-container">
+                <div class="info">
+                    <h1>Davi Lucas Borges</h1>
+                    <h2 data-i18n="heroSubtitle">Desenvolvedor Junior em Formação</h2>
+                    <p data-i18n="heroLocation"><strong>16 anos</strong> - Goiânia, Goiás</p>
+                    <p data-i18n="heroText">Estou aprendendo na prática e montando projetos com <strong>HTML</strong>, <strong>CSS</strong> e <strong>TypeScript</strong>.</p>
+                    <a href="https://wa.me/5562998498557" class="btn" data-i18n="heroButton">Fale comigo <i class="fa-brands fa-whatsapp"></i></a>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="info">
-            <h2>Olá, eu sou o Davi Lucas</h2>
-            <h3>Desenvolvedor <i class="fas fa-rocket"></i></h3>
-            <p>Eu Crio Sistemas e WebSites </p>
-            <a href="#" target="_blank" class="btn">Entre em contato</a>
-        </div>
+        <section class="section" id="sobre">
+            <div class="container flex-center">
+                <h2 class="section-title-01" data-i18n="aboutTitle">Sobre mim</h2>
+                <div class="content contacts-content">
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h3 data-i18n="aboutCard1Title">Quem sou</h3>
+                        <p data-i18n="aboutCard1Text">Tenho 16 anos, moro em Goiânia e estudo desenvolvimento de sistemas.</p>
+                    </div>
 
-        <div class="home-img">
-            <img src="#" alt="">
-        </div>
-        <a href="#about" class="scroll-down">Desça para saber mais<i class="fas fa-arrow-down"></i></a>
-    </section>
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 data-i18n="aboutCard2Title">O que estudo</h3>
+                        <p data-i18n="aboutCard2Text">No momento estou reforçando HTML e CSS, além de começar a mexer com TypeScript.</p>
+                    </div>
 
-    <!-- Seção Sobre -->
-
-    <section class="about section" id="about">
-        <div class="container flex-center">
-            <h1 class="section-title-01">Sobre</h1>
-            <div class="about-img">
-                <img src="" alt="Sobre Davi Lucas">
-            </div>
-            <div class="about-info">
-                    <div class="description">
-                        <h4>Eu Me Chamo Davi</h4>
-                        <h4>Sou um desenvolvedor <span>Junior</span> e Eu Estou Apreendendo mais sobre a cada dia que passa</h4>
-                        <h4>Tenho 16 anos e estou no 2° ano do ensino médio, estou aprendendo a programar a pouco tempo, mas já tenho uma boa base de conhecimento</h4>
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h3 data-i18n="aboutCard3Title">Objetivo</h3>
+                        <p data-i18n="aboutCard3Text">Quero evoluir projeto por projeto, testando ideias e melhorando meu código.</p>
                     </div>
                 </div>
-                <ul class="Professional-list">
-                    <li class="list-item">
-                        <h3>Desenvolvedor Web</h3>
-                        <span>Tenho experiência em desenvolvimento web, utilizando tecnologias como HTML, CSS e JavaScript para criar sites responsivos e interativos.</span>
-                    </li>
+            </div>
+        </section>
 
-                    <li class="list-item">
-                        <h3>+6</h3>
-                        <span>Meses de apreendizado com Desenvolvimento Web , Logica de Programação, e Desenvolvimento de Software </span>
-                    </li>
-                </ul>
-                <a href="#" class="btn">Download CV<i class="fas fa-download"></i></a>
+        <section class="portfolio section" id="portfolio">
+            <div class="container flex-center">
+                <h2 class="section-title-01" data-i18n="portfolioTitle">Portfólio</h2>
+                <div class="content portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="portfolio-img">
+                            <img src="#" alt="Projeto 1">
+                            <div class="portfolio-overlay">
+                                <a href="#" class="btn-small" data-i18n="projectButton">Ver Projeto</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3 data-i18n="project1Title">Site Pessoal</h3>
+                            <p data-i18n="project1Text">Meu próprio portfólio, feito para organizar meus estudos e mostrar minha evolução.</p>
+                            <div class="portfolio-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-img">
+                            <img src="#" alt="Projeto 2">
+                            <div class="portfolio-overlay">
+                                <a href="#" class="btn-small" data-i18n="projectButton">Ver Projeto</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Landing Page</h3>
+                            <p data-i18n="project2Text">Modelo de página para treinar estrutura, espaçamento e organização visual.</p>
+                            <div class="portfolio-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-img">
+                            <img src="#" alt="Projeto 3">
+                            <div class="portfolio-overlay">
+                                <a href="#" class="btn-small" data-i18n="projectButton">Ver Projeto</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>App Web</h3>
+                            <p data-i18n="project3Text">Espaço para praticar JavaScript e criar pequenas interações no navegador.</p>
+                            <div class="portfolio-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacts section" id="contacts">
+            <div class="container flex-center">
+                <h2 class="section-title-01" data-i18n="contactsTitle">Contatos</h2>
+                <div class="content contacts-content">
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p data-i18n="emailText">Entre em contato comigo:</p>
+                        <a href="mailto:Davilucasborges2010@gmail.com">Davilucasborges2010@gmail.com</a>
+                    </div>
+
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p data-i18n="whatsappText">Mande uma mensagem:</p>
+                        <a href="https://wa.me/5562998498557">+55 (62) 99849-8557</a>
+                    </div>
+
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p data-i18n="linkedinText">Conecte-se comigo:</p>
+                        <a href="https://linkedin.com/in/seuUsuario" target="_blank">linkedin.com/in/davilucas</a>
+                    </div>
+
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p data-i18n="githubText">Veja meus projetos:</p>
+                        <a href="https://github.com/DaviLucasBorges" target="_blank">github.com/DaviLucasBorges</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p data-i18n="footerText">&copy; 2026 Davi Lucas. Feito por mim enquanto estudo desenvolvimento.</p>
+            <a href="#" class="btn btn-footer" data-i18n="downloadCv">Download CV <i class="fas fa-download"></i></a>
+            <div class="footer-icons">
+                <a href="#" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/DaviLucasBorges" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
             </div>
         </div>
-    </section>
+    </footer>
+
+    <script>
+        const translations = {
+            pt: {
+                navHome: 'Home',
+                navPortfolio: 'Portfólio',
+                navContact: 'Contato',
+                heroSubtitle: 'Desenvolvedor Junior em Formação',
+                heroLocation: '<strong>16 anos</strong> - Goiânia, Goiás',
+                heroText: 'Estou aprendendo na prática e montando projetos com <strong>HTML</strong>, <strong>CSS</strong> e <strong>TypeScript</strong>.',
+                heroButton: 'Fale comigo <i class="fa-brands fa-whatsapp"></i>',
+                aboutTitle: 'Sobre mim',
+                aboutCard1Title: 'Quem sou',
+                aboutCard1Text: 'Tenho 16 anos, moro em Goiânia e estudo desenvolvimento de sistemas.',
+                aboutCard2Title: 'O que estudo',
+                aboutCard2Text: 'No momento estou reforçando HTML e CSS, além de começar a mexer com TypeScript.',
+                aboutCard3Title: 'Objetivo',
+                aboutCard3Text: 'Quero evoluir projeto por projeto, testando ideias e melhorando meu código.',
+                portfolioTitle: 'Portfólio',
+                projectButton: 'Ver Projeto',
+                project1Title: 'Site Pessoal',
+                project1Text: 'Meu próprio portfólio, feito para organizar meus estudos e mostrar minha evolução.',
+                project2Text: 'Modelo de página para treinar estrutura, espaçamento e organização visual.',
+                project3Text: 'Espaço para praticar JavaScript e criar pequenas interações no navegador.',
+                contactsTitle: 'Contatos',
+                emailText: 'Entre em contato comigo:',
+                whatsappText: 'Mande uma mensagem:',
+                linkedinText: 'Conecte-se comigo:',
+                githubText: 'Veja meus projetos:',
+                footerText: '&copy; 2026 Davi Lucas. Feito por mim enquanto estudo desenvolvimento.',
+                downloadCv: 'Download CV <i class="fas fa-download"></i>'
+            },
+            en: {
+                navHome: 'Home',
+                navPortfolio: 'Portfolio',
+                navContact: 'Contact',
+                heroSubtitle: 'Junior Developer in Training',
+                heroLocation: '<strong>16 years old</strong> - Goiânia, Goiás',
+                heroText: 'I am learning by building projects with <strong>HTML</strong>, <strong>CSS</strong>, and <strong>TypeScript</strong>.',
+                heroButton: 'Contact me <i class="fa-brands fa-whatsapp"></i>',
+                aboutTitle: 'About me',
+                aboutCard1Title: 'Who I am',
+                aboutCard1Text: 'I am 16 years old, I live in Goiânia, and I study systems development.',
+                aboutCard2Title: 'What I study',
+                aboutCard2Text: 'Right now I am improving my HTML and CSS while starting to work with TypeScript.',
+                aboutCard3Title: 'Goal',
+                aboutCard3Text: 'I want to improve project by project, testing ideas and writing better code.',
+                portfolioTitle: 'Portfolio',
+                projectButton: 'View Project',
+                project1Title: 'Personal Website',
+                project1Text: 'My own portfolio, made to organize my studies and show my progress.',
+                project2Text: 'Page model to practice structure, spacing, and visual organization.',
+                project3Text: 'Space to practice JavaScript and create small browser interactions.',
+                contactsTitle: 'Contacts',
+                emailText: 'Contact me:',
+                whatsappText: 'Send me a message:',
+                linkedinText: 'Connect with me:',
+                githubText: 'See my projects:',
+                footerText: '&copy; 2026 Davi Lucas. Made by me while studying development.',
+                downloadCv: 'Download CV <i class="fas fa-download"></i>'
+            },
+            es: {
+                navHome: 'Inicio',
+                navPortfolio: 'Portafolio',
+                navContact: 'Contacto',
+                heroSubtitle: 'Desarrollador Junior en formación',
+                heroLocation: '<strong>16 años</strong> - Goiânia, Goiás',
+                heroText: 'Estoy aprendiendo en la práctica y creando proyectos con <strong>HTML</strong>, <strong>CSS</strong> y <strong>TypeScript</strong>.',
+                heroButton: 'Habla conmigo <i class="fa-brands fa-whatsapp"></i>',
+                aboutTitle: 'Sobre mí',
+                aboutCard1Title: 'Quién soy',
+                aboutCard1Text: 'Tengo 16 años, vivo en Goiânia y estudio desarrollo de sistemas.',
+                aboutCard2Title: 'Lo que estudio',
+                aboutCard2Text: 'Ahora estoy reforzando HTML y CSS, además de empezar a trabajar con TypeScript.',
+                aboutCard3Title: 'Objetivo',
+                aboutCard3Text: 'Quiero evolucionar proyecto por proyecto, probando ideas y mejorando mi código.',
+                portfolioTitle: 'Portafolio',
+                projectButton: 'Ver Proyecto',
+                project1Title: 'Sitio Personal',
+                project1Text: 'Mi propio portafolio, hecho para organizar mis estudios y mostrar mi evolución.',
+                project2Text: 'Modelo de página para practicar estructura, espaciado y organización visual.',
+                project3Text: 'Espacio para practicar JavaScript y crear pequeñas interacciones en el navegador.',
+                contactsTitle: 'Contactos',
+                emailText: 'Ponte en contacto conmigo:',
+                whatsappText: 'Envíame un mensaje:',
+                linkedinText: 'Conecta conmigo:',
+                githubText: 'Mira mis proyectos:',
+                footerText: '&copy; 2026 Davi Lucas. Hecho por mí mientras estudio desarrollo.',
+                downloadCv: 'Descargar CV <i class="fas fa-download"></i>'
+            },
+            fr: {
+                navHome: 'Accueil',
+                navPortfolio: 'Portfolio',
+                navContact: 'Contact',
+                heroSubtitle: 'Développeur junior en formation',
+                heroLocation: '<strong>16 ans</strong> - Goiânia, Goiás',
+                heroText: 'J’apprends en pratiquant et je crée des projets avec <strong>HTML</strong>, <strong>CSS</strong> et <strong>TypeScript</strong>.',
+                heroButton: 'Me contacter <i class="fa-brands fa-whatsapp"></i>',
+                aboutTitle: 'À propos de moi',
+                aboutCard1Title: 'Qui je suis',
+                aboutCard1Text: 'J’ai 16 ans, j’habite à Goiânia et j’étudie le développement de systèmes.',
+                aboutCard2Title: 'Ce que j’étudie',
+                aboutCard2Text: 'En ce moment, je renforce HTML et CSS, et je commence à travailler avec TypeScript.',
+                aboutCard3Title: 'Objectif',
+                aboutCard3Text: 'Je veux progresser projet après projet, tester des idées et améliorer mon code.',
+                portfolioTitle: 'Portfolio',
+                projectButton: 'Voir le projet',
+                project1Title: 'Site personnel',
+                project1Text: 'Mon propre portfolio, fait pour organiser mes études et montrer mon évolution.',
+                project2Text: 'Modèle de page pour pratiquer la structure, l’espacement et l’organisation visuelle.',
+                project3Text: 'Espace pour pratiquer JavaScript et créer de petites interactions dans le navigateur.',
+                contactsTitle: 'Contacts',
+                emailText: 'Contacte-moi :',
+                whatsappText: 'Envoie-moi un message :',
+                linkedinText: 'Connecte-toi avec moi :',
+                githubText: 'Voir mes projets :',
+                footerText: '&copy; 2026 Davi Lucas. Fait par moi pendant mes études de développement.',
+                downloadCv: 'Télécharger CV <i class="fas fa-download"></i>'
+            },
+            jp: {
+                navHome: 'ホーム',
+                navPortfolio: 'ポートフォリオ',
+                navContact: '連絡先',
+                heroSubtitle: 'ジュニア開発者を目指して勉強中',
+                heroLocation: '<strong>16歳</strong> - ゴイアニア, ゴイアス',
+                heroText: '<strong>HTML</strong>、<strong>CSS</strong>、<strong>TypeScript</strong>で実際に作りながら学んでいます。',
+                heroButton: '連絡する <i class="fa-brands fa-whatsapp"></i>',
+                aboutTitle: '自己紹介',
+                aboutCard1Title: '私について',
+                aboutCard1Text: '16歳で、ゴイアニアに住み、システム開発を勉強しています。',
+                aboutCard2Title: '勉強していること',
+                aboutCard2Text: '今はHTMLとCSSを強化しながら、TypeScriptにも取り組み始めています。',
+                aboutCard3Title: '目標',
+                aboutCard3Text: 'プロジェクトごとに成長し、アイデアを試してコードを改善していきたいです。',
+                portfolioTitle: 'ポートフォリオ',
+                projectButton: 'プロジェクトを見る',
+                project1Title: '個人サイト',
+                project1Text: '学習内容を整理し、成長を見せるために作った自分のポートフォリオです。',
+                project2Text: '構成、余白、見た目の整理を練習するためのページモデルです。',
+                project3Text: 'JavaScriptを練習し、ブラウザ上の小さな動きを作るための場所です。',
+                contactsTitle: '連絡先',
+                emailText: '連絡はこちら:',
+                whatsappText: 'メッセージを送る:',
+                linkedinText: 'つながる:',
+                githubText: 'プロジェクトを見る:',
+                footerText: '&copy; 2026 Davi Lucas. 開発を学びながら自分で作りました。',
+                downloadCv: 'CVをダウンロード <i class="fas fa-download"></i>'
+            }
+        };
+
+        const languageMenu = document.getElementById('language-menu');
+        const languageButton = document.getElementById('language-toggle');
+        const currentLanguageLabel = document.getElementById('current-language');
+        const languageOptions = document.querySelectorAll('[data-lang]');
+        const languageAttributes = {
+            pt: 'pt-BR',
+            en: 'en',
+            es: 'es',
+            fr: 'fr',
+            jp: 'ja'
+        };
+        let currentLanguage = 'pt';
+
+        const setLanguage = (language) => {
+            currentLanguage = language;
+            document.documentElement.lang = languageAttributes[language];
+            currentLanguageLabel.textContent = language.toUpperCase();
+            document.querySelectorAll('[data-i18n]').forEach((element) => {
+                const key = element.dataset.i18n;
+                element.innerHTML = translations[currentLanguage][key];
+            });
+
+            languageOptions.forEach((option) => {
+                option.classList.toggle('active', option.dataset.lang === currentLanguage);
+            });
+
+            languageMenu.classList.remove('open');
+            languageButton.setAttribute('aria-expanded', 'false');
+        };
+
+        languageButton.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const isOpen = languageMenu.classList.toggle('open');
+            languageButton.setAttribute('aria-expanded', isOpen);
+        });
+
+        languageOptions.forEach((option) => {
+            option.addEventListener('click', () => {
+                setLanguage(option.dataset.lang);
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!languageMenu.contains(event.target)) {
+                languageMenu.classList.remove('open');
+                languageButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        setLanguage(currentLanguage);
+    </script>
 </body>
 </html>
